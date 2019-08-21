@@ -19,8 +19,7 @@ public class PriorityJobSchedulerUnitTest {
             JobPriority priority;
             int r = ThreadLocalRandom.current().nextInt(1, 9);
             if (r <= 3) {
-                priority = JobPriority.LOW;
-                //
+                priority = JobPriority.LOW;                
             } else if (r <= 6) {
                 priority = JobPriority.MEDIUM;
             } else {
