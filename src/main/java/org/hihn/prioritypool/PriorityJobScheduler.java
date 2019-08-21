@@ -45,7 +45,7 @@ public class PriorityJobScheduler {
 	protected void close(ExecutorService scheduler) {
 		scheduler.shutdown();
 		try {
-			scheduler.awaitTermination(Long.MAX_VALUE, TimeUnit.HOURS);
+			scheduler.awaitTermination(1, TimeUnit.SECONDS);
 		} catch (InterruptedException e) {
 			Thread.currentThread().interrupt();
 			throw new RuntimeException("Error wating for workers");
